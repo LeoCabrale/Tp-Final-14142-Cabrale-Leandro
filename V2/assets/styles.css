@@ -1,0 +1,212 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+nav
+{
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0 5%;
+    height: 150px;
+    background-color: rgb(46, 45, 45);
+}
+nav .logo 
+{
+    float: left;
+    width: 250px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    align-items: 24px;
+}
+nav .lista
+{
+    float: right;
+    padding: 0;
+    margin: 0;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+nav .lista li
+{
+    list-style: none;
+}
+nav .lista a
+{
+   display: block;
+   text-transform: uppercase;
+   padding: 15px;
+   font-size: 16px;
+   font-weight: bold;
+   color: #ffffff;
+   text-decoration: none;
+
+}
+nav .lista a:hover 
+{
+    border-bottom: 4px solid #675bf9;
+}
+#ax 
+{
+    position: absolute;
+    top: -100px;
+}
+nav .icon-bars 
+{
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+nav .icon-bars .line
+{
+    width: 30px;
+    height: 5px;
+    background-color: #ffffff;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all.3s ease-in-out;
+}
+body
+{
+    padding: 150px;
+    background-color: rgb(230, 117, 37);
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 140px;
+    min-height: 100vh;
+}
+table
+{
+    height: 60%;
+    width: 80%;
+    border: black;
+}
+.input-field
+{
+    position: relative;
+}
+.input-field input
+{
+    width: 350px;
+    height: 60px;
+    border-radius: 6px;
+    font-size: 18px;
+    padding: 0 15px;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    outline: none;
+}
+.input-field label
+{
+    position: absolute;
+    top: 50%;
+    left: 120px;
+    transform: translate(-50%);
+    color: #fff;
+    font-size: 19px;
+    pointer-events: none;
+    transition: .3s;
+}
+input:focus ~ label
+{
+    top: 0;
+    left: 15px;
+    font-size: 16px;
+    padding: 0 2px;
+    background: rgb(230, 117, 37);
+}
+button
+{
+    position: relative;
+    border: none;
+    height: 50px;
+    width: 200px;
+    font-size: 22px;
+    transition: .3s linear;
+    cursor: pointer;
+}
+.btn:hover
+{
+    background-color: #ff6666;
+    box-shadow: 0 0 5px #ff6666, 0 0 25px #ff6666,0 0 50px #ff6666,
+    0 0 100px #ff6666, 0 0 300px #ff6666;
+}
+footer
+{
+    background-color: rgb(46, 45, 45);
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    left: 0;
+    right: 0;
+}
+.FooterDiv
+{
+    display: flex;
+    justify-content: center;
+}
+.footerImg
+{
+   
+    height: 25px;
+    width: 25px;
+}
+p
+{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+@media(max-width:768px)
+{
+    nav .logo
+    {
+        float: none;
+        width: auto;
+        
+    }
+    nav .lista
+    {
+        float: none;
+        position: fixed;
+        z-index: 9;
+        left: 0;
+        right: 0;
+        top: 150px;
+        bottom: 100%;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: rgba(0, 0, 0,0.9);
+        overflow: hidden;
+        transition: all .5s ease-in-out;
+    }
+    nav .lista a {
+        font-size: 20px;
+    }
+    #ax:checked ~ .lista {
+        bottom: 0;
+    }
+    nav .icon-bars {
+
+        display: block;
+        float: none;
+    }
+}
